@@ -25,6 +25,7 @@ exports.up = async (knex) => {
     table.string('display_name', 254).notNullable();
     table.string('email', 254).notNullable().unique();
     table.text('google_id').notNullable();
+    table.text('image_url').notNullable();
     addDefaultColumns(table);
     addForeignKey(table, tableNames.role).notNullable();
   });
